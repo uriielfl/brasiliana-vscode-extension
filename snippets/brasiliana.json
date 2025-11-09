@@ -1,0 +1,54 @@
+{
+    "variavel": {
+        "prefix": "variavel",
+        "body": [
+            "declarar variavel ${1:nome} = ${2:valor};"
+        ],
+        "description": "Declara uma variável"
+    },
+    "funcao": {
+        "prefix": "funcao",
+        "body": [
+            "declarar funcao ${1:nome}(${2:parametros}) {",
+            "    ${3:// corpo}",
+            "}"
+        ],
+        "description": "Declara uma função"
+    },
+    "if": {
+        "prefix": "se",
+        "body": [
+            "se(${1:condicao}) {",
+            "    ${2:// bloco verdadeiro}",
+            "} senao {",
+            "    ${3:// bloco falso}",
+            "}"
+        ],
+        "description": "Estrutura condicional se/senao"
+    },
+    "enquanto": {
+        "prefix": "enquanto",
+        "body": [
+            "enquanto(${1:condicao}) {",
+            "    ${2:// corpo}",
+            "}"
+        ],
+        "description": "Loop enquanto"
+    },
+    "repitaDeAte": {
+        "prefix": "repita",
+        "body": [
+            "repita de ${1:i} ate ${2:max} {",
+            "    ${3:// corpo}",
+            "}"
+        ],
+        "description": "Loop repita de ... ate ..."
+    },
+    "imprimir": {
+        "prefix": "imprimir",
+        "body": [
+            "imprimir(${1:valor});"
+        ],
+        "description": "Imprime valor"
+    }
+}

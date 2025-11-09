@@ -1,0 +1,65 @@
+{
+    "name": "brasiliana",
+    "displayName": "Brasiliana",
+    "description": "Suporte à linguagem Brasiliana (highlight, snippets e autocomplete).",
+    "publisher": "uriel",
+    "author": "Uriel Francisco Libano <uriellibano2009@gmail.com>",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/uriielfl/brasiliana-vscode-extension.git"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "./extension/images/icon.png",
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onLanguage:brasiliana"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "brasiliana",
+                "aliases": [
+                    "Brasiliana",
+                    "brasiliana"
+                ],
+                "extensions": [
+                    ".br",
+                    ".bras",
+                    ".brl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "brasiliana",
+                "scopeName": "source.brasiliana",
+                "path": "./syntaxes/brasiliana.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "brasiliana",
+                "path": "./snippets/brasiliana.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package",
+        "lint": "echo 'no lint configured'"
+    },
+    "devDependencies": {
+        "@types/node": "^24.9.2",
+        "@types/vscode": "^1.80.0",
+        "typescript": "^5.9.3"
+    }
+}

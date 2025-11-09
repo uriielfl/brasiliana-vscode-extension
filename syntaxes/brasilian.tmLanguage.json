@@ -1,0 +1,102 @@
+{
+    "name": "Brasiliana",
+    "scopeName": "source.brasiliana",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#identifiers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.brasiliana",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.brasiliana",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.single.brasiliana",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.brasiliana",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.double.brasiliana",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.brasiliana",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.brasiliana",
+                    "match": "\\b\\d+(?:\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.brasiliana",
+                    "match": "\\b(se|senao|enquanto|repita|de|ate|retorne)\\b"
+                },
+                {
+                    "name": "storage.type.brasiliana",
+                    "match": "\\b(declarar|variavel|funcao)\\b"
+                },
+                {
+                    "name": "constant.language.boolean.brasiliana",
+                    "match": "\\b(Verdadeiro|Falso)\\b"
+                },
+                {
+                    "name": "support.function.print.brasiliana",
+                    "match": "\\b(imprimir)\\b"
+                }
+            ]
+        },
+        "identifiers": {
+            "patterns": [
+                {
+                    "name": "variable.other.brasiliana",
+                    "match": "\\b[a-zA-Z_][\\wÀ-ÿ_]*\\b"
+                }
+            ]
+        }
+    },
+    "fileTypes": [
+        "brasiliana",
+        "bras"
+    ]
+}
